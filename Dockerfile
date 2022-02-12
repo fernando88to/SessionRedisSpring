@@ -11,4 +11,9 @@ COPY context.xml $CATALINA_HOME/conf/context.xml
 
 
 COPY build/libs/SessionRedisSpring-0.1-plain.war $CATALINA_HOME/webapps/app.war
-ENV CATALINA_OPTS="-server -noverify -Xms512m -Xmx512m -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m -XX:TieredStopAtLevel=1 -Dspring.output.ansi.enabled=always -Duser.language=pt -Duser.country=BR  -Djava.awt.headless=true  -Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=127.0.0.1"
+#ENV CATALINA_OPTS="-server -noverify -Xms512m -Xmx512m "
+#ENV CATALINA_OPTS="-server -noverify -Xms384m -Xmx384m "
+ENV CATALINA_OPTS="-server -noverify -Xms256m -Xmx256m"
+#ENV CATALINA_OPTS="-server -noverify -Xms512m -Xmx512m -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m"
+#ENV CATALINA_OPTS="-server -noverify -Xms512m -Xmx512m -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m -XX:TieredStopAtLevel=1 -Dspring.output.ansi.enabled=always -Duser.language=pt -Duser.country=BR  -Djava.awt.headless=true  -Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=127.0.0.1"
+

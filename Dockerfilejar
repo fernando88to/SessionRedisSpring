@@ -1,0 +1,8 @@
+FROM eclipse-temurin:11.0.14_9-jdk
+COPY build/libs/SessionRedisSpring-0.1.jar /app/app.jar
+
+
+ENV JAVA_OPTS ="-Xms512m -Xmx512m "
+EXPOSE 8080
+ENTRYPOINT exec java -server -noverify -Xms256m -Xmx256m -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m  -jar /app/app.jar --server.servlet.context-path=/app
+

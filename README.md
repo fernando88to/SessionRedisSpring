@@ -19,3 +19,11 @@ $ sh atualizaAplicacao.sh
 $ docker-compose -f docker-compose-dev.yaml up --build -d
 $ grailsw run-app
 ```
+
+
+#### Run production tomcat embedded with jar
+
+```
+$ ./gradlew bootJar  
+$ docker-compose -f docker-compose-jar.yaml up --build -d
+```
